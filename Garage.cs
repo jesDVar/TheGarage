@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheGarage
+﻿namespace TheGarage
 {
+
+    // A collection of vehicles.
+    //
+    //
     class Garage
     {
     }

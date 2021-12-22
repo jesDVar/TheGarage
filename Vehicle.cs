@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheGarage
+﻿namespace TheGarage
 {
+    //Make this a baseclass, with several subclasses.
+    //Interface.
+
     class Vehicle
     {
 
