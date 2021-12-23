@@ -1,4 +1,6 @@
-﻿namespace TheGarage
+﻿using System;
+
+namespace TheGarage
 {
     // The main meny, Where user gets instructions.
     // Availability only for user input/output.
@@ -13,5 +15,16 @@
     //
     class Meny
     {
+        //var input = Console.ReadLine();
+        //switch (input)
+        //    {
+        //    case "1":
+
+        //    break;
+
+        //    case "2":
+
+        //    break;
+        //    }
     }
 }
