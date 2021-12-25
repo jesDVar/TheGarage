@@ -5,7 +5,7 @@
     //
     //
 
-    class Vehicle
+    public class Vehicle
     {
         /*[...Ska innehålla registreringsnummer, färg,
          * antal hjul och andra egenskaper ni kan komma på].
@@ -13,13 +13,27 @@
          */
 
         // Add properties with some input logic.    
-        public string Regnr { get; set; }
+        public string RegNr { get; set; }
         public string Color { get; set; }
         public int NrOfWheels { get; set; }
         public string WeightCl { get; set; }
 
-
-        
+        public Vehicle(string regNr, string color, int nrOfWheels, string weightCl)
+        {
+            RegNr = regNr;
+            Color = color;
+            NrOfWheels = nrOfWheels;
+            WeightCl = weightCl;
+        }
+    }
+    public class Airplane : Vehicle
+    {
+        private int NoOfEngines { get; set; }
+        public Airplane(string regNr, string color, int nrOfWheels, string weightCl, int noOfEngines) : base(regNr, color, nrOfWheels, weightCl)
+        {
+            NoOfEngines = noOfEngines;
+        }
 
     }
+
 }

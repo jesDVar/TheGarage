@@ -13,6 +13,8 @@ namespace TheGarage
     // Make use of Interface
     //ToDo: Look up Interface... and ToDo...
     //
+    //This is where all the communication
+    // will be between the user and the program. 
     class Meny
     {
         //var input = Console.ReadLine();
