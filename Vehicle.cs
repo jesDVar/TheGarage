@@ -25,6 +25,10 @@
             NrOfWheels = nrOfWheels;
             WeightCl = weightCl;
         }
+        public virtual string Stats()
+        {
+            return $"This is a nice looking vehicle, let me see its licenseplate...{RegNr}";
+        }
     }
     public class Airplane : Vehicle
     {
