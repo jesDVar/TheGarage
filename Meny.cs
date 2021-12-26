@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheGarage
+﻿namespace TheGarage
 {
     // The main meny, Where user gets instructions.
     // Availability only for user input/output.

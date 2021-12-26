@@ -42,11 +42,44 @@
     public class MotorCycle : Vehicle
     {
         private int NoOfSeats { get; set; }
-        public MotorCycle(string regNo)
+        public MotorCycle(string regNo, string color, int noOfWheels, string weightCl, int noOfSeats) : base(regNo, color, noOfWheels, weightCl)
         {
-
+            NoOfSeats = noOfSeats;
         }
+        public class Car : Vehicle
+        {
+            private int CylVol { get; set; }
+            public Car(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
+            {
+                CylVol = cylVol;
+            }
+        }
+        public class Bus : Vehicle
+        {
+            private int CylVol { get; set; }
+            public Bus(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
+            {
+                CylVol = cylVol;
+            }
+        }
+        public class Boat : Vehicle
+        {
+            private int Lenght { get; set; }
+            public Boat(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
+            {
+                Lenght = lenght;
+            }
+        }
+        //public class Bus : Vehicle
+        //{
+        //    private int Lenght { get; set; }
+        //    public Bus(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
+        //    {
+        //        Lenght = lenght;
+        //    }
     }
-
-
 }
+
+
+
+
