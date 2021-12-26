@@ -13,31 +13,40 @@
          */
 
         // Add properties with some input logic.    
-        public string RegNr { get; set; }
+        public string RegNo { get; set; }
         public string Color { get; set; }
-        public int NrOfWheels { get; set; }
+        public int NoOfWheels { get; set; }
         public string WeightCl { get; set; }
 
-        public Vehicle(string regNr, string color, int nrOfWheels, string weightCl)
+        public Vehicle(string regNo, string color, int noOfWheels, string weightCl)
         {
-            RegNr = regNr;
+            RegNo = regNo;
             Color = color;
-            NrOfWheels = nrOfWheels;
+            NoOfWheels = noOfWheels;
             WeightCl = weightCl;
         }
         public virtual string Stats()
         {
-            return $"This is a nice looking vehicle, let me see its licenseplate...{RegNr}";
+            return $"This is a nice looking vehicle, let me see its licenseplate...{RegNo}";
         }
     }
     public class Airplane : Vehicle
     {
         private int NoOfEngines { get; set; }
-        public Airplane(string regNr, string color, int nrOfWheels, string weightCl, int noOfEngines) : base(regNr, color, nrOfWheels, weightCl)
+        public Airplane(string regNo, string color, int noOfWheels, string weightCl, int noOfEngines) : base(regNo, color, noOfWheels, weightCl)
         {
             NoOfEngines = noOfEngines;
         }
 
     }
+    public class MotorCycle : Vehicle
+    {
+        private int NoOfSeats { get; set; }
+        public MotorCycle(string regNo)
+        {
+
+        }
+    }
+
 
 }
