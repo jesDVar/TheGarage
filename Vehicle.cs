@@ -45,14 +45,16 @@
         {
             NoOfSeats = noOfSeats;
         }
+
         public class Car : Vehicle
         {
-            private int CylVol { get; set; }
-            public Car(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
+            private int FuelType { get; set; }
+            public Car(string regNo, string color, int noOfWheels, string weightCl, int fuelType) : base(regNo, color, noOfWheels, weightCl)
             {
-                CylVol = cylVol;
+                FuelType = fuelType;
             }
         }
+
         public class Bus : Vehicle
         {
             private int CylVol { get; set; }
@@ -60,6 +62,7 @@
             {
                 CylVol = cylVol;
             }
+
         }
         public class Boat : Vehicle
         {

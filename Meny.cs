@@ -1,4 +1,6 @@
-﻿namespace TheGarage
+﻿using System;
+
+namespace TheGarage
 {
     // The main meny, Where user gets instructions.
     // Availability only for user input/output.
@@ -13,9 +15,17 @@
     //
     //This is where all the communication
     // will be between the user and the program. 
-    class Meny
+    public class Meny
     {
-        //var input = Console.ReadLine();
+        public Meny()
+        {
+            Console.WriteLine("************************************");
+            Console.WriteLine("            MENU                    ");
+            Console.WriteLine("************************************");
+            //Console.WriteLine("1: Add 5 dummy cars to the garage.");
+            //Console.WriteLine("2: Add 10 dummy cars to the garage.");
+        }
+        //private var input = Console.ReadLine();
         //switch (input)
         //    {
         //    case "1":
@@ -25,6 +35,6 @@
         //    case "2":
 
         //    break;
-        //    }
     }
 }
+
