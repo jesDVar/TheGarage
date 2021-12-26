@@ -37,7 +37,6 @@
         {
             NoOfEngines = noOfEngines;
         }
-
     }
     public class MotorCycle : Vehicle
     {
@@ -70,13 +69,6 @@
                 Lenght = lenght;
             }
         }
-        //public class Bus : Vehicle
-        //{
-        //    private int Lenght { get; set; }
-        //    public Bus(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
-        //    {
-        //        Lenght = lenght;
-        //    }
     }
 }
 
