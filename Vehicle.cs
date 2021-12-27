@@ -38,6 +38,7 @@
             NoOfEngines = noOfEngines;
         }
     }
+
     public class MotorCycle : Vehicle
     {
         private int NoOfSeats { get; set; }
@@ -46,31 +47,33 @@
             NoOfSeats = noOfSeats;
         }
 
-        public class Car : Vehicle
+        
+    }
+
+    public class Car : Vehicle
+    {
+        private int FuelType { get; set; }
+        public Car(string regNo, string color, int noOfWheels, string weightCl, int fuelType) : base(regNo, color, noOfWheels, weightCl)
         {
-            private int FuelType { get; set; }
-            public Car(string regNo, string color, int noOfWheels, string weightCl, int fuelType) : base(regNo, color, noOfWheels, weightCl)
-            {
-                FuelType = fuelType;
-            }
+            FuelType = fuelType;
+        }
+    }
+
+    public class Bus : Vehicle
+    {
+        private int CylVol { get; set; }
+        public Bus(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
+        {
+            CylVol = cylVol;
         }
 
-        public class Bus : Vehicle
+    }
+    public class Boat : Vehicle
+    {
+        private int Lenght { get; set; }
+        public Boat(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
         {
-            private int CylVol { get; set; }
-            public Bus(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
-            {
-                CylVol = cylVol;
-            }
-
-        }
-        public class Boat : Vehicle
-        {
-            private int Lenght { get; set; }
-            public Boat(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
-            {
-                Lenght = lenght;
-            }
+            Lenght = lenght;
         }
     }
 }
