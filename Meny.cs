@@ -22,6 +22,15 @@ namespace TheGarage
             do
             {
                 ShowMainMeny();
+                var input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        GarageHandler.Park();
+                    default:
+                        break;
+                }
 
             } while (true);
         }
@@ -34,21 +43,10 @@ namespace TheGarage
             Console.WriteLine("1: Park a vehicle.");
             Console.WriteLine("2: Remove a vehicle.");
             Console.WriteLine("3: Create a new Garage.");
-            Console.ReadLine();
             //Console.WriteLine("4: Add 5 dummy vehicles to the garage.");            
             //Console.WriteLine(": Add 5 dummy vehicles to the garage.");
             //Console.WriteLine(": Add 10 dummy vehicles to the garage.");
         }
-        //private var input = Console.ReadLine();
-        //switch (input)
-        //    {
-        //    case "1":
-
-        //    break;
-
-        //    case "2":
-
-        //    break;
     }
 }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheGarage
 {
-    class UI
+    class UIFace
     {
     }
 }
