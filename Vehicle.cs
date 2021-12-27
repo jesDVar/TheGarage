@@ -5,7 +5,7 @@
     //
     //
 
-    public class Vehicle
+    public abstract class Vehicle
     {
         /*[...Ska innehålla registreringsnummer, färg,
          * antal hjul och andra egenskaper ni kan komma på].
