@@ -27,7 +27,7 @@ namespace TheGarage
                 switch (input)
                 {
                     case "1":
-                        GarageHandler.Park();
+                         
                     default:
                         break;
                 }
