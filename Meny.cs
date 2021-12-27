@@ -19,11 +19,25 @@ namespace TheGarage
     {
         public Meny()
         {
+            do
+            {
+                ShowMainMeny();
+
+            } while (true);
+        }
+
+        private void ShowMainMeny()
+        {
             Console.WriteLine("************************************");
             Console.WriteLine("            MENU                    ");
             Console.WriteLine("************************************");
-            //Console.WriteLine("1: Add 5 dummy cars to the garage.");
-            //Console.WriteLine("2: Add 10 dummy cars to the garage.");
+            Console.WriteLine("1: Park a vehicle.");
+            Console.WriteLine("2: Remove a vehicle.");
+            Console.WriteLine("3: Create a new Garage.");
+            Console.ReadLine();
+            //Console.WriteLine("4: Add 5 dummy vehicles to the garage.");            
+            //Console.WriteLine(": Add 5 dummy vehicles to the garage.");
+            //Console.WriteLine(": Add 10 dummy vehicles to the garage.");
         }
         //private var input = Console.ReadLine();
         //switch (input)

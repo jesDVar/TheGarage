@@ -17,27 +17,27 @@ namespace TheGarage
         {
             //Creating a list with some "dummy" data.
 
-            var vehicles = new List<Vehicle>
-            {
-                new Airplane("ADR123", "Green", 5, "Super Heavy", 4),
-                new Airplane("DDL223", "Red", 8, "Super Heavy", 4),
-                new Airplane("JKL098", "Blue", 8, "Super Heavy", 4),
-                new Airplane("ERT980", "White", 8, "Super Heavy", 4),
-                new Airplane("SDF123", "Green", 8, "Super Heavy", 4),
+            //var vehicles = new List<Vehicle>
+            //{
+            //    new Airplane("ADR123", "Green", 5, "Super Heavy", 4),
+            //    new Airplane("DDL223", "Red", 8, "Super Heavy", 4),
+            //    new Airplane("JKL098", "Blue", 8, "Super Heavy", 4),
+            //    new Airplane("ERT980", "White", 8, "Super Heavy", 4),
+            //    new Airplane("SDF123", "Green", 8, "Super Heavy", 4),
 
-            };
+            //};
 
 
-            foreach (Vehicle fordon in vehicles)
-            {
-                Console.WriteLine(fordon.Stats());
-            }            
+            //foreach (Vehicle fordon in vehicles)
+            //{
+            //    Console.WriteLine(fordon.Stats());
+            //}            
 
             Meny meny = new Meny();
 
-            var gh = new GarageHandler(3);
-            gh.SeedData();
-            gh.PrintAllVehicles();
+            //var gh = new GarageHandler(3);
+            //gh.SeedData();
+            //gh.PrintAllVehicles();
         }
 
         //private static void Meny()
