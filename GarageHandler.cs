@@ -53,7 +53,7 @@ namespace TheGarage
             // want to park(Car, Bus Airplane...)?
 
             //Console.WriteLine("Are You TRying To PARK?");
-            garage.Park(new MotorCycle("MOT111", "Red", 2, "Light", 1));
+            //garage.Park(new Vehicle());
 
         }
 

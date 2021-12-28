@@ -49,8 +49,9 @@ namespace TheGarage
                 case "1":
 
                     // Give feedback to screen.
-                    ui.PrintString("You pressed 1");
-                    garageHandler.Park();              
+                    Console.Clear();
+                    ui.PrintString("What kind of vehicle do you want to park?");
+                    ui.GetUserInput();
 
                     //Trying to reach GarageHandler to "park a vehicle".
 

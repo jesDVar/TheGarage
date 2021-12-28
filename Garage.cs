@@ -3,9 +3,7 @@ using System.Collections.Generic;
 
 namespace TheGarage
 {
-    // A collection of vehicles.
-    //
-    //
+    // A collection of vehicles.   
     public class Garage<T> : IEnumerable<T> where T : Vehicle
     {
         private int capacity;
