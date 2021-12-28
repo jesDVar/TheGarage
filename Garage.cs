@@ -7,24 +7,33 @@ namespace TheGarage
     // A collection of vehicles.
     //
     //
-    public class Garage<T> : IEnumerable<Vehicle> where T : Vehicle
+    public class Garage<T> : IEnumerable<T> where T : Vehicle
     {
+        private int capacity;
+        private int count;
+        private T[] vehicles;
 
-        private Vehicle[] vehicles;
-
+        public int Count => count;
+        public bool IsFull => count >= capacity;
         public Garage(int capacity)
         {
-            vehicles = new Vehicle[capacity];
-           
+            //Validate capacity
+            this.capacity = capacity;
+            vehicles = new T[capacity];
+
         }
 
-        public bool Park(Vehicle vehicle)
+        public bool Park(T vehicle)
         {
+            //Finns plats
+            if (IsFull) return false;
+
             for (int i = 0; i < vehicles.Length; i++)
             {
                 if (vehicles[i] == null)
                 {
                     vehicles[i] = vehicle;
+                    count++;
                     return true;
                 }
             }
@@ -32,22 +41,25 @@ namespace TheGarage
             return false;
         }
 
-        public bool Unpark(string regno)
+        public bool Unpark(T vehicle)
         {
             for (int i = 0; i < vehicles.Length; i++)
             {
-                if (vehicles[i].RegNo == regno)
-                {
-                    vehicles[i] = null;
-                    return true;
-                }
+             
+                    if (vehicles[i] == vehicle)
+                    {
+                        vehicles[i] = null;
+                        count--;
+                        return true;
+
+                    }
             }
 
             return false;
         }
 
         // Här definierar vi vad som händer när man gör en foreach på en Garage-variabel
-        public IEnumerator<Vehicle> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < vehicles.Length; i++)
             {

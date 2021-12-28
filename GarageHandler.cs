@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace TheGarage
 {
@@ -25,6 +26,9 @@ namespace TheGarage
         public GarageHandler(int capacity)
         {
             garage = new Garage<Vehicle>(capacity);
+           //var garage1 = new Garage<Airplane>(capacity);
+           //var garage3 = new Garage<Bus>(capacity);
+           //var garage4 = new Garage<string>(capacity);
         }
 
         public void PrintAllVehicles()
@@ -55,6 +59,23 @@ namespace TheGarage
         public void FindByRegNo()
         {
 
+        }
+
+        internal IEnumerable<Vehicle> GetVehicles()
+        {
+            return garage.ToList();
+        } 
+        
+        internal IEnumerable<Vehicle> FindByColor(string color)
+        {
+            var redVehicles = garage.Where(v => v.Color == color);
+            return redVehicles;
+            //var found = garage.FirstOrDefault(v => v.RegNo == "ABC123");
+
+            //foreach (var item in garage)
+            //{
+
+            //}
         }
     }
 }
