@@ -35,9 +35,9 @@ namespace TheGarage
 
             Meny meny = new Meny();
 
-            //var gh = new GarageHandler(3);
-            //gh.SeedData();
-            //gh.PrintAllVehicles();
+            var gh = new GarageHandler(3);
+            gh.SeedData();
+            gh.PrintAllVehicles();
         }
 
         //private static void Meny()

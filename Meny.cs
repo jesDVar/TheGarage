@@ -22,12 +22,23 @@ namespace TheGarage
             do
             {
                 ShowMainMeny();
+                //GetUserInput();
                 var input = Console.ReadLine();
+          
 
                 switch (input)
                 {
                     case "1":
-                         
+                        
+                        //Trying to reach GarageHandler to "park a vehicle"
+
+                        Console.WriteLine("You pressed 1");
+                        //var input = UIFace.GetUserInput();
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
                     default:
                         break;
                 }
