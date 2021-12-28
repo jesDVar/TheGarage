@@ -48,7 +48,7 @@ namespace TheGarage
 
         public void Park()
         {
-            garage.Park(new Car("CAR111", "White", 4, "Light", 1));
+            Console.WriteLine("Are You TRying To PARK?");
 
         }
 
