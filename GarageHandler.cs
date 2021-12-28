@@ -48,7 +48,12 @@ namespace TheGarage
 
         public void Park()
         {
-            Console.WriteLine("Are You TRying To PARK?");
+            // When we park a vehicle we need to create a new
+            // instance of a Vehicle, but WHAT do we
+            // want to park(Car, Bus Airplane...)?
+
+            //Console.WriteLine("Are You TRying To PARK?");
+
 
         }
 
