@@ -44,12 +44,12 @@ namespace TheGarage
             var input = Console.ReadLine();
 
 
-            switch (input)
+            switch (input.ToUpper())
             {
                 case "1":
 
                     // Give feedback to screen.
-                   ui.PrintString("You pressed 1");
+                    ui.PrintString("You pressed 1");
 
                     //Trying to reach GarageHandler to "park a vehicle".
 
@@ -58,13 +58,17 @@ namespace TheGarage
                     //var input = UIFace.GetUserInput();
                     break;
                 case "2":
+                    
                     break;
                 case "3":
                     garageHandler.SeedData();
-                    break; 
+                    break;
                 case "4":
                     var vehicles = garageHandler.GetVehicles();
                     PrintVehicles(vehicles);
+                    break;
+                case "Q":
+                    Environment.Exit(0);
                     break;
                 default:
                     break;
@@ -81,36 +85,35 @@ namespace TheGarage
 
         private void CreateGarage()
         {
-            ShowCreateGarageMeny();
-            var input = Console.ReadLine();
+          
+                ShowCreateGarageMeny();
+                var input = Console.ReadLine();
 
-            switch (input)
-            {
-                case "1":
-                    //Set garage size 
-                    //Intansiate handler with size
-                    ui.PrintString("Size of garage?");
-                    int capacity = 0;
-                    while (!int.TryParse(Console.ReadLine(), out capacity))
-                    {
-                        Console.WriteLine("Only numeric values");
-                    }
-                    garageHandler = new GarageHandler(capacity);
-
-                    break; 
-                case "Q":
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Wrong input!");
-                    break;
-            }
+                switch (input.ToUpper())
+                {
+                    case "1":
+                        //Set garage size 
+                        //Intansiate handler with size
+                        ui.PrintString("Size of garage?");
+                        int capacity = 0;
+                        while (!int.TryParse(Console.ReadLine(), out capacity))
+                        {
+                            Console.WriteLine("Only numeric values");
+                        }
+                        garageHandler = new GarageHandler(capacity);
+                        break;
+                    case "Q":
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Wrong input!");
+                        break;
+                }    
         }
-
         private static void ShowCreateGarageMeny()
         {
             Console.WriteLine("************************************");
-            Console.WriteLine("          Create garage MENU        ");
+            Console.WriteLine("          CRATE GARAGE MENU         ");
             Console.WriteLine("************************************");
             Console.WriteLine("1: Create a new Garage.");
             Console.WriteLine("Q: Quit.");
@@ -125,9 +128,8 @@ namespace TheGarage
             Console.WriteLine("2: Remove a vehicle.");
             Console.WriteLine("3: Add dummy vehicles.");
             Console.WriteLine("4: Show all vehicles.");
-            //Console.WriteLine("4: Add 5 dummy vehicles to the garage.");            
-            //Console.WriteLine(": Add 5 dummy vehicles to the garage.");
-            //Console.WriteLine(": Add 10 dummy vehicles to the garage.");
+            Console.WriteLine("Q: Quit.");
+
         }
     }
 }

@@ -47,7 +47,7 @@
             NoOfSeats = noOfSeats;
         }
 
-        
+
     }
 
     public class Car : Vehicle

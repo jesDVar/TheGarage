@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace TheGarage
 {
-
     // A collection of vehicles.
     //
     //
@@ -45,14 +44,14 @@ namespace TheGarage
         {
             for (int i = 0; i < vehicles.Length; i++)
             {
-             
-                    if (vehicles[i] == vehicle)
-                    {
-                        vehicles[i] = null;
-                        count--;
-                        return true;
 
-                    }
+                if (vehicles[i] == vehicle)
+                {
+                    vehicles[i] = null;
+                    count--;
+                    return true;
+
+                }
             }
 
             return false;
