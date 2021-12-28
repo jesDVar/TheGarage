@@ -47,7 +47,8 @@ namespace TheGarage
         }
 
         public void Park()
-        { 
+        {
+            garage.Park(new Car("CAR111", "White", 4, "Light", 1));
 
         }
 
@@ -72,10 +73,6 @@ namespace TheGarage
             return redVehicles;
             //var found = garage.FirstOrDefault(v => v.RegNo == "ABC123");
 
-            //foreach (var item in garage)
-            //{
-
-            //}
         }
     }
 }

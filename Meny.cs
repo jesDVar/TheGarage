@@ -50,6 +50,8 @@ namespace TheGarage
 
                     // Give feedback to screen.
                     ui.PrintString("You pressed 1");
+                    garageHandler.Park();
+
 
                     //Trying to reach GarageHandler to "park a vehicle".
 
