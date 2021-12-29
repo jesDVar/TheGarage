@@ -4,11 +4,7 @@ using System.Linq;
 
 namespace TheGarage
 {
-    // The GarageHandler class which is
-    // where we handle our garage
-    // by adding/removing cars and
-    // so on.
-    //
+
     public class GarageHandler
     {
         //1. Add vehicle
@@ -41,9 +37,9 @@ namespace TheGarage
 
         public void SeedData()
         {
-            garage.Park(new Car("CAR111", "White", 4, "Light", 1));
-            garage.Park(new Airplane("AIR111", "White", 5, "Light", 2));
-            garage.Park(new MotorCycle("MOT111", "Red", 2, "Light", 1));
+            garage.Park(new Car("CAR111", "White", 4, "Diesel"));
+            garage.Park(new Airplane("AIR111", "White", 5, 1));
+            garage.Park(new MotorCycle("MOT111", "Red", 2, 2));
         }
 
         public void Park()

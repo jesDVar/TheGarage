@@ -12,18 +12,19 @@
          *-----------------Note, what type should RegNr be?
          */
 
-        // Add properties with some input logic.    
+        // Add properties with some input logic.
+        
         public string RegNo { get; set; }
         public string Color { get; set; }
         public int NoOfWheels { get; set; }
-        public string WeightCl { get; set; }
+   
 
-        public Vehicle(string regNo, string color, int noOfWheels, string weightCl)
+        public Vehicle(string regNo, string color, int noOfWheels)
         {
             RegNo = regNo;
             Color = color;
             NoOfWheels = noOfWheels;
-            WeightCl = weightCl;
+          
         }
         public virtual string Stats()
         {
@@ -33,7 +34,7 @@
     public class Airplane : Vehicle
     {
         private int NoOfEngines { get; set; }
-        public Airplane(string regNo, string color, int noOfWheels, string weightCl, int noOfEngines) : base(regNo, color, noOfWheels, weightCl)
+        public Airplane(string regNo, string color, int noOfWheels, int noOfEngines) : base(regNo, color, noOfWheels)
         {
             NoOfEngines = noOfEngines;
         }
@@ -42,36 +43,31 @@
     public class MotorCycle : Vehicle
     {
         private int NoOfSeats { get; set; }
-        public MotorCycle(string regNo, string color, int noOfWheels, string weightCl, int noOfSeats) : base(regNo, color, noOfWheels, weightCl)
+        public MotorCycle(string regNo, string color, int noOfWheels, int noOfSeats) : base(regNo, color, noOfWheels)
         {
             NoOfSeats = noOfSeats;
         }
-
-
     }
-
     public class Car : Vehicle
     {
-        private int FuelType { get; set; }
-        public Car(string regNo, string color, int noOfWheels, string weightCl, int fuelType) : base(regNo, color, noOfWheels, weightCl)
+        private string FuelType { get; set; }
+        public Car(string regNo, string color, int noOfWheels, string fuelType) : base(regNo, color, noOfWheels)
         {
             FuelType = fuelType;
         }
     }
-
     public class Bus : Vehicle
     {
         private int CylVol { get; set; }
-        public Bus(string regNo, string color, int noOfWheels, string weightCl, int cylVol) : base(regNo, color, noOfWheels, weightCl)
+        public Bus(string regNo, string color, int noOfWheels, int cylVol) : base(regNo, color, noOfWheels)
         {
             CylVol = cylVol;
         }
-
     }
     public class Boat : Vehicle
     {
         private int Lenght { get; set; }
-        public Boat(string regNo, string color, int noOfWheels, string weightCl, int lenght) : base(regNo, color, noOfWheels, weightCl)
+        public Boat(string regNo, string color, int noOfWheels, int lenght) : base(regNo, color, noOfWheels)
         {
             Lenght = lenght;
         }

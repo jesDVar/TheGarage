@@ -50,7 +50,11 @@ namespace TheGarage
 
                     // Give feedback to screen.
                     Console.Clear();
+                    // Declaire vehicles to park
                     ui.PrintString("What kind of vehicle do you want to park?");
+                    
+                    
+                    // We'll check this input.
                     ui.GetUserInput();
 
                     //Trying to reach GarageHandler to "park a vehicle".
@@ -100,7 +104,7 @@ namespace TheGarage
                         int capacity = 0;
                         while (!int.TryParse(Console.ReadLine(), out capacity))
                         {
-                            Console.WriteLine("Only numeric values");
+                            Console.WriteLine("Only numeric values!");
                         }
                         garageHandler = new GarageHandler(capacity);
                         break;
@@ -128,7 +132,7 @@ namespace TheGarage
             Console.WriteLine("************************************");
             Console.WriteLine("1: Park a vehicle.");
             Console.WriteLine("2: Remove a vehicle.");
-            Console.WriteLine("3: Add dummy vehicles.");
+            Console.WriteLine("3: Add 3 dummy vehicles.");
             Console.WriteLine("4: Show all vehicles.");
             Console.WriteLine("Q: Quit.");
 
