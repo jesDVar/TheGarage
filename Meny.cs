@@ -51,11 +51,27 @@ namespace TheGarage
                     // Give feedback to screen.
                     Console.Clear();
                     // Declaire vehicles to park
-                    ui.PrintString("What kind of vehicle do you want to park?");
                     ShowParkingMeny();
                     
                     // We'll check this input.
-                    ui.GetUserInput();
+                    
+                    
+                    switch (ui.GetUserInput()) 
+                    {
+                        case "1":
+                            //Console.WriteLine("HELLLO CASE 1");
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
+                        case "4":
+                            break;
+                        case "5":
+                            break;
+                        default:
+                            break;
+                    }
 
                     //Trying to reach GarageHandler to "park a vehicle".
 
@@ -89,11 +105,11 @@ namespace TheGarage
             Console.WriteLine("************************************");
             Console.WriteLine("What kind of vehicle do" +
                               " you want to park?");
-            Console.WriteLine("1: Quit.");
-            Console.WriteLine("2: Quit.");
-            Console.WriteLine("3: Quit.");
-            Console.WriteLine("4: Quit.");
-            Console.WriteLine("5: Quit.");
+            Console.WriteLine("1: Airplane");
+            Console.WriteLine("2: Motorcycle");
+            Console.WriteLine("3: Car");
+            Console.WriteLine("4: Bus");
+            Console.WriteLine("5: Boat");
             Console.WriteLine("Q: Quit.");
 
 
