@@ -52,7 +52,7 @@ namespace TheGarage
                     Console.Clear();
                     // Declaire vehicles to park
                     ui.PrintString("What kind of vehicle do you want to park?");
-                    
+                    ShowParkingMeny();
                     
                     // We'll check this input.
                     ui.GetUserInput();
@@ -79,6 +79,26 @@ namespace TheGarage
                 default:
                     break;
             }
+        }
+
+        private void ShowParkingMeny()
+        {
+
+            Console.WriteLine("************************************");
+            Console.WriteLine("          PARK A VEHICLE            ");
+            Console.WriteLine("************************************");
+            Console.WriteLine("What kind of vehicle do" +
+                              " you want to park?");
+            Console.WriteLine("1: Quit.");
+            Console.WriteLine("2: Quit.");
+            Console.WriteLine("3: Quit.");
+            Console.WriteLine("4: Quit.");
+            Console.WriteLine("5: Quit.");
+            Console.WriteLine("Q: Quit.");
+
+
+
+
         }
 
         private void PrintVehicles(IEnumerable<Vehicle> vehicles)
