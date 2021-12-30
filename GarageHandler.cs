@@ -44,6 +44,8 @@ namespace TheGarage
 
         public void Park()
         {
+            //Vehicle parkVehicle = new();
+
             // When we park a vehicle we need to create a new
             // instance of a Vehicle, but WHAT do we
             // want to park(Car, Bus Airplane...)?
