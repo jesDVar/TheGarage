@@ -49,6 +49,8 @@ namespace TheGarage
                 case "1":
                     //Console.Clear();
                     ShowParkingMeny();
+                    var gHandler = new Vehicle();
+                    Console.WriteLine(gHandler.VehicleObjects());
                     //WhatVehicle(ui.GetUserInput);
 
                     //UIFace ui = new UIFace();

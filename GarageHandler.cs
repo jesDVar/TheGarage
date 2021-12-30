@@ -44,7 +44,7 @@ namespace TheGarage
 
         public void Park()
         {
-
+            //return garage.Park();
             //if (garage.IsFull())
             //{
 
@@ -82,10 +82,13 @@ namespace TheGarage
             //var found = garage.FirstOrDefault(v => v.RegNo == "ABC123");
 
         }
-        public enum VehicleEnum
+        public enum VehicleObjects : ushort
         {
-
-
+            Airplane = 1,
+            Motorcycle = 2,
+            Car = 3,
+            Bus = 4,
+                Boat = 5,
         }
     }
 }
