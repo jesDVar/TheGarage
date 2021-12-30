@@ -44,14 +44,19 @@ namespace TheGarage
 
         public void Park()
         {
+
+            //if (garage.IsFull())
+            //{
+
+            //}
             //Vehicle parkVehicle = new();
 
-            // When we park a vehicle we need to create a new
-            // instance of a Vehicle, but WHAT do we
-            // want to park(Car, Bus Airplane...)?
+                // When we park a vehicle we need to create a new
+                // instance of a Vehicle, but WHAT do we
+                // want to park(Car, Bus Airplane...)?
 
-            //Console.WriteLine("Are You TRying To PARK?");
-            //garage.Park(new Vehicle());
+                //Console.WriteLine("Are You TRying To PARK?");
+                //garage.Park(new Vehicle());
 
         }
 
@@ -75,6 +80,11 @@ namespace TheGarage
             var redVehicles = garage.Where(v => v.Color == color);
             return redVehicles;
             //var found = garage.FirstOrDefault(v => v.RegNo == "ABC123");
+
+        }
+        public enum VehicleEnum
+        {
+
 
         }
     }

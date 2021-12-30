@@ -7,7 +7,9 @@ namespace TheGarage
     {
         public string GetUserInput()
         {
-            return Console.ReadLine();
+            String userInput = Console.ReadLine();
+            return userInput.ToUpper();
+
         }
 
         public void PrintString(string message)
