@@ -28,7 +28,7 @@
         }
         public virtual string Stats()
         {
-            return $"This is a nice looking vehicle, let me see its licenseplate...{RegNo}";
+            return $"Type: {GetType().Name}, RegNo: {RegNo}, Color: {Color}, Number of wheels: {NoOfWheels}, ";
         }
     }
     public class Airplane : Vehicle
@@ -37,6 +37,11 @@
         public Airplane(string regNo, string color, int noOfWheels, int noOfEngines) : base(regNo, color, noOfWheels)
         {
             NoOfEngines = noOfEngines;
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"Number of engines: {NoOfEngines}."; 
         }
     }
 
@@ -47,6 +52,11 @@
         {
             NoOfSeats = noOfSeats;
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"Number of seats: {NoOfSeats}.";
+        }
     }
     public class Car : Vehicle
     {
@@ -54,6 +64,11 @@
         public Car(string regNo, string color, int noOfWheels, string fuelType) : base(regNo, color, noOfWheels)
         {
             FuelType = fuelType;
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"Fueltype: {FuelType}.";
         }
     }
     public class Bus : Vehicle
@@ -63,6 +78,11 @@
         {
             CylVol = cylVol;
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"Cylinder Volume: {CylVol}.";
+        }
     }
     public class Boat : Vehicle
     {
@@ -71,6 +91,12 @@
         {
             Lenght = lenght;
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"Length: {Lenght}.";
+        }
+
     }
 }
 

@@ -38,12 +38,12 @@ namespace TheGarage
             return false;
         }
 
-        public bool Unpark(T vehicle)
+        public bool Unpark(string regnr)
         {
             for (int i = 0; i < vehicles.Length; i++)
             {
 
-                if (vehicles[i] == vehicle)
+                if (vehicles[i] != null && vehicles[i].RegNo == regnr)
                 {
                     vehicles[i] = null;
                     count--;

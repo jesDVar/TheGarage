@@ -48,9 +48,8 @@ namespace TheGarage
             {
                 case "1":
                     //Console.Clear();
-                    ShowParkingMeny();
-                    var gHandler = new Vehicle();
-                    Console.WriteLine(gHandler.VehicleObjects());
+                    //var gHandler = new Vehicle();
+                    //Console.WriteLine(gHandler.VehicleObjects());
                     //WhatVehicle(ui.GetUserInput);
 
                     //UIFace ui = new UIFace();
@@ -91,17 +90,28 @@ namespace TheGarage
                     // GarageHandler(Console.WriteLine());
                     //ar input = GarageHandler.Park();
                     //var input = UIFace.GetUserInput();
+                    ShowParkingMeny();
+                    garageHandler.Park(ui.GetInputParking());
+                    Console.ReadLine();
                     break;
                 case "2":
-
+                    garageHandler.UnPark(ui.GetInputRegNr());
+                    Console.ReadLine();
                     break;
                 case "3":
                     garageHandler.SeedData();
+                    Console.ReadLine();
                     break;
                 case "4":
-                    var vehicles = garageHandler.GetVehicles();
-                    PrintVehicles(vehicles);
+                    //var vehicles = garageHandler.GetVehicles();
+                    //PrintVehicles(vehicles);
                     //Console.ReadLine();
+                    garageHandler.PrintAllVehicles();
+                    Console.ReadLine();
+                    break;
+                case "5":
+                    garageHandler.FindByRegNo(ui.GetInputRegNr());
+                    Console.ReadLine();
                     break;
                 case "Q":
                     Environment.Exit(0);
@@ -115,18 +125,14 @@ namespace TheGarage
             Console.WriteLine("************************************");
             Console.WriteLine("          PARK A VEHICLE            ");
             Console.WriteLine("************************************");
-            Console.WriteLine("What kind of vehicle do");
-            Console.WriteLine(" you want to park?");
-            Console.WriteLine("1: Airplane");
-            Console.WriteLine("2: Motorcycle");
-            Console.WriteLine("3: Car");
-            Console.WriteLine("4: Bus");
-            Console.WriteLine("5: Boat");
+            //Console.WriteLine("What kind of vehicle do");
+            //Console.WriteLine(" you want to park?");
+            //Console.WriteLine("1: Airplane");
+            //Console.WriteLine("2: Motorcycle");
+            //Console.WriteLine("3: Car");
+            //Console.WriteLine("4: Bus");
+            //Console.WriteLine("5: Boat");
             Console.WriteLine("Q: Quit.");
-
-
-
-
         }
 
         private void PrintVehicles(IEnumerable<Vehicle> vehicles)
@@ -180,8 +186,9 @@ namespace TheGarage
             Console.WriteLine("************************************");
             Console.WriteLine("1: Park a vehicle.");
             Console.WriteLine("2: Remove a vehicle.");
-            Console.WriteLine("3: Add 3 dummy vehicles.");
+            Console.WriteLine("3: Add some dummy vehicles.");
             Console.WriteLine("4: Show all vehicles.");
+            Console.WriteLine("5: Search for vehicle with registration number");
             Console.WriteLine("Q: Quit.");
 
         }
